@@ -1,5 +1,4 @@
-const port = (process.env.PORT || 3000);
-let socket = io(location.hostname + ':' + port);
+let socket = io();
 export default {
 	count() {
 		socket.emit('count', true);
