@@ -1,3 +1,115 @@
-h1 {
-  color: blue;
+$primary: #EF5350;
+
+body {
+  background: url('../assets/gray.svg');
+  color: $primary;
+}
+
+a {
+  color: $primary;
+}
+
+#count-number {
+  font-size: 6em;
+  font-weight: lighter;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-middle {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.full-vh {
+  height: 100vh;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.count-wrapper {
+  // border: 1px solid $primary;
+  // border-radius: 10px;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.pull-top {
+  top: 0;
+  position: absolute;
+}
+
+.pull-bottom {
+  bottom: 0;
+  position: absolute;
+}
+
+.pull-right {
+  right: 0;
+  position: absolute;
+}
+
+.pull-left {
+  left: 0;
+  position: absolute;
+}
+
+.padding-left {
+  padding-left: 15px;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+.margin-bottom {
+  margin-bottom: 15px;
+}
+.padding-all {
+  padding: 15px;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(179,179,179,0.7);
+}
+
+.relative {
+  position: relative;
+}
+
+.status {
+  color: #66BB6A;
+  #green-circle {
+    background-color: #66BB6A;
+    border-radius: 99999px;
+    width: 15px;
+    height: 15px;
+  }
 }

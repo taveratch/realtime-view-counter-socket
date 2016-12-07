@@ -1,4 +1,5 @@
 let socket = io();
+let isConnect = socket.id;
 export default {
 	count() {
 		socket.emit('count', true);
