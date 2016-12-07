@@ -15,10 +15,12 @@
     "json-loader": "^0.5.4",
     "lodash": "^4.17.2",
     "react": "^15.3.0",
-    "react-dom": "^15.3.0",
     "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "socket.io": "^1.7.1",
+    "source-map-loader": "^0.1.5"
   },
   "devDependencies": {
     "babel": "^6.5.2",

@@ -23,7 +23,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js|jsx?$/,
-        loader: 'babel',
+        loader: 'babel!source-map-loader',
         exclude: path.join(__dirname, 'node_modules') },
       { test: /\.scss?$/,
         loader: 'style!css!sass',

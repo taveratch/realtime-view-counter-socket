@@ -1,9 +1,8 @@
 const path = require('path');
 const express = require('express');
-
+const app = express();
 module.exports = {
   app: function () {
-    const app = express();
     let indexPath = path.join(__dirname, '/../index.html');
     let publicPath = express.static(path.join(__dirname, '../'));
     if (process.env.NODE_ENV === 'production') {
@@ -12,7 +11,7 @@ module.exports = {
     }
     console.log(indexPath);
     app.use('/public', publicPath);
-    app.use("/stylesheet", express.static(path.join(__dirname, '../stylesheet')));
+    app.use("/libs", express.static(path.join(__dirname, '../libs')));
     app.get('/', function (_, res) { res.sendFile(indexPath); });
 
     return app;
