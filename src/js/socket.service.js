@@ -1,4 +1,4 @@
-let socket = io('http://localhost:3000');
+let socket = io(location.hostname + ':3000');
 export default {
 	count() {
 		socket.emit('count', true);
