@@ -1,22 +1,27 @@
 module.exports = {
   startServer(http) {
-    var io = require('socket.io')(http);
-    const port = (process.env.PORT || 3000);
+    let io = require('socket.io')(http);
     let count = 0;
+
     io.on('connection', function(socket) {
-    	console.log('a user connected');
-    	sendCount(count);
+      /* if there is new connection send the current count*/
+    	sendCount(socket, count);
     	socket.on('count', (msg) => {
-    		console.log('count');
+        /* if there is new view, then increase and broadcast to all*/
     		count++;
-    		sendCount(count);
+    		broadcastCount(count);
     	});
     });
-
-    const sendCount = (count) => {
+    const broadcastCount = (count) => {
     	io.emit('update', {
     		count: count
     	});
+    };
+
+    const sendCount = (socket, count) => {
+      socket.emit('update', {
+        count: count
+      });
     };
   }
 };
