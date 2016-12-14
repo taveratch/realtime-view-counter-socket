@@ -13,4 +13,4 @@ And point your browser to `http://localhost:8080`.
 * Counting page view in real time
 
 ### Demo
-http://increase-me.herokuapp.com
+http://view-counter.projects.taweesoft.xyz
